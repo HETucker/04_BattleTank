@@ -2,7 +2,7 @@
 
 
 #include "TankPlayerControler.h"
-#include"BattleTank.h"
+#include "BattleTank.h"
 
 
 ATank * ATankPlayerControler::GetControlledTank() const
@@ -21,6 +21,6 @@ void ATankPlayerControler::BeginPlay()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Playercontroling: %s"),*(ControlledTank->GetName()));
+		UE_LOG(LogTemp, Warning, TEXT("Player controling: %s"),*(ControlledTank->GetName()));
 	}
 }
