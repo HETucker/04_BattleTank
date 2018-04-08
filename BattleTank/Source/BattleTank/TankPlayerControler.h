@@ -19,4 +19,6 @@ class BATTLETANK_API ATankPlayerControler : public APlayerController
 	
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
+	void AimTwardsCrosshairs();
+	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 };
