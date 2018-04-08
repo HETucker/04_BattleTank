@@ -24,3 +24,9 @@ void ATankPlayerControler::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("Player controling: %s"),*(ControlledTank->GetName()));
 	}
 }
+
+void ATankPlayerControler::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	UE_LOG(LogTemp, Warning, TEXT("Player is Ticking"));
+}
