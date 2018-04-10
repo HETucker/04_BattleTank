@@ -29,6 +29,7 @@ void ATankPlayerControler::Tick(float DeltaTime)
 
 void ATankPlayerControler::AimTwardsCrosshairs()
 {
+	float LaunchSpeed = 10000;
 	if (!GetControlledTank()) { return; }
 	FVector HitLocation; //Out Parameter
 	if (GetSightRayHitLocation(HitLocation))
