@@ -4,6 +4,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Components/ActorComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "TankAimingComponent.generated.h"
 
 
@@ -17,17 +18,11 @@ public:
 	UTankAimingComponent();
 	void AimAt(FVector HitLocation, float LaunchSpeed);
 	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
-
-protected:
-	// Called when the game starts
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	//TODO add SetBarrelReference
 
 private:
 	UStaticMeshComponent* Barrel = nullptr;
-		
+	void MoveBarrelTowards(FVector AimDirection);
+	
 	
 };
