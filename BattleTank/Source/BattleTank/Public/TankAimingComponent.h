@@ -9,6 +9,7 @@
 
 class UTankBarrel;
 
+//Hold's barrels propertys and elevation method
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BATTLETANK_API UTankAimingComponent : public UActorComponent
 {
