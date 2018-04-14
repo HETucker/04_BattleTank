@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "Public/Tank.h"
+
 #include "CoreMinimal.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
@@ -11,6 +11,8 @@
 /**
  * 
  */
+class ATank;
+
 UCLASS()
 class BATTLETANK_API ATankPlayerControler : public APlayerController
 {
