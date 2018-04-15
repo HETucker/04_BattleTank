@@ -25,6 +25,9 @@ public:
 	UFUNCTION(BluePrintCallable, Category = Setup)
 	void SetTurretReference(UTankTurret* TurretToSet);
 
+	UFUNCTION(BluePrintCallable)
+	void Fire();
+
 protected:
 	// Called when the game starts or when spawned
 	UTankAimingComponent* TankAimingComponent = nullptr;
@@ -35,8 +38,7 @@ private:
 
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BluePrintCallable)
-	void Fire();
+	
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -48,4 +50,8 @@ private:
 		TSubclassOf<AProjectile> ProjectileBlueprint;
 	
 	UTankBarrel* Barrel = nullptr;
+
+	UPROPERTY(EditAnywhere, Category = Firing)
+		float ReloadTimeInSeconds = 3;
+	double LastFireTime = 0;
 };
