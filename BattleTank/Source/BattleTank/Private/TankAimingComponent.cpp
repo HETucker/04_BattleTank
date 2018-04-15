@@ -3,6 +3,7 @@
 #include "Public/TankAimingComponent.h"
 #include "BattleTank.h"
 #include "Public/TankBarrel.h"
+#include "Public/TankTurret.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
@@ -46,10 +47,17 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 	}
 }
 
+
 void UTankAimingComponent::SetBarrelReference(UTankBarrel * BarrelToSet)
 {
 	Barrel = BarrelToSet;
 }
+
+void UTankAimingComponent::SetTurretReference(UTankTurret * TurretToSet)
+{
+	Turret = TurretToSet;
+}
+
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
