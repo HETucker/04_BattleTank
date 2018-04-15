@@ -34,7 +34,8 @@ private:
 
 	virtual void BeginPlay() override;
 
-
+	UFUNCTION(BluePrintCallable)
+	void Fire();
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

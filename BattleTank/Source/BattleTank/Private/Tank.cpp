@@ -29,6 +29,7 @@ void ATank::BeginPlay()
 	
 }
 
+
 // Called to bind functionality to input
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -40,4 +41,9 @@ void ATank::AimAt(FVector HitLocation)
 {
 	 //TODO find sensable firing speed
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
+}
+
+void ATank::Fire()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Fire called!"));
 }
