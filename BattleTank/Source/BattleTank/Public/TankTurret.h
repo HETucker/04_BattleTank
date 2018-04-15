@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Engine/World.h"
 #include "Components/StaticMeshComponent.h"
 #include "TankTurret.generated.h"
 
@@ -16,5 +17,12 @@ class BATTLETANK_API UTankTurret : public UStaticMeshComponent
 	
 	
 	
-	
+public:
+	void Rotate(float RelativeSpeed);
+
+
+private:
+	UPROPERTY(EditAnywhere, Category = Setup)
+		float MaxDegreesPerSecond = 25;
+
 };
